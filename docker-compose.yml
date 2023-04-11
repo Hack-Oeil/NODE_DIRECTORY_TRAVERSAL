@@ -1,0 +1,9 @@
+version: '3.3'
+services:
+  webserver:
+    build: http/
+    ports:
+      - "80:80"
+    image: node_lfi
+    container_name: ho-webserver
+    command: npm start
