@@ -5,5 +5,7 @@ services:
     ports:
       - "80:80"
     image: node_lfi
+    labels:
+      ho.ctf.cyrhades: webserver
     container_name: ho-webserver
     command: npm start
