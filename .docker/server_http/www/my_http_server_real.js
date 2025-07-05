@@ -2,7 +2,7 @@ const fs = require('fs');
 const http = require('http');
 const path = require('path');
 require('dotenv').config({ path: './app/.env.myapp' })
-const flag = require("./yoop_flag-d46dd5a4a7f.js");
+const { flag, username } = require('./yoop_flag-d46dd5a4a7f.js');
 
 // Ce fichier et le vrai lancé mais l'utilisateur ne le sait pas
 const server = http.createServer((req, res) => {
@@ -31,8 +31,7 @@ const server = http.createServer((req, res) => {
 
                 const html = data.toString(); // Convertit le Buffer en string
                 if(html.indexOf(process.env.FLAG) !== -1) {
-                    const username = process.env.HOOS_CTF_USERNAME || null;
-                    const flagText = flag(process.env.FLAG, username);
+                    const flagText = flag(process.env.FLAG, username(req));
                     res.end(html.replace(process.env.FLAG, flagText));
                 } else {
                     res.end(data);
