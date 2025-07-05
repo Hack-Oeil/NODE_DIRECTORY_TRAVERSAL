@@ -1,11 +1,11 @@
-version: '3.3'
+version: '3.9'
 services:
   webserver:
-    build: http/
+    build: ./.docker/server_http/
+    environment:
+      - HOOS_CTF_USERNAME=${HOOS_CTF_USERNAME:-}
     ports:
-      - "80:80"
-    image: node_lfi
+      - ${PORT}:80
+    restart: always
     labels:
-      ho.ctf.cyrhades: webserver
-    container_name: ho-webserver
-    command: npm start
+      ho.ctf.cyrhades: "1"

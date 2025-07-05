@@ -1,0 +1,15 @@
+{
+  "name": "ctf_lfi_node",
+  "version": "1.0.0",
+  "description": "CTF LFI node",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node my_http_server.js"
+  },
+  "keywords": [],
+  "author": "Cyrhades",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.1"
+  }
+}
