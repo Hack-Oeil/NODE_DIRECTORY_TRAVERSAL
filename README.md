@@ -13,7 +13,7 @@ Mais vous devez trouver l'emplacement de ce fichier, pour info nous sommes sur u
 
 
 ## Aperçu
-![.docker/infos/capture.jpg](.docker/infos/capture.jpg)
+![presentation/assets/images/capture.jpg](presentation/assets/images/capture.jpg)
 
 
 -----------
