@@ -8,14 +8,28 @@
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
-    <!--Favicon-->
     <link rel="shortcut icon" href="./assets/images/favicon.ico" title="Favicon"/>
-    <!-- Main CSS Files -->
     <link rel="stylesheet" href="./assets/css/style.css">
-    <!-- Namari Color CSS -->
-    <link rel="stylesheet" href="./assets/css/namari-color.css">
-    <!--Google Webfonts-->
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+    // Vérifie si la fenêtre est dans une iframe
+    if (window.self !== window.top) {
+        document.querySelectorAll('a').forEach((link) => {
+        link.addEventListener('click', (event) => {
+            const a = event.target.closest('a[href^="http"]');
+            if (a) {
+            event.preventDefault();
+            window.parent.postMessage({
+                type: "open-external",
+                url: a.href
+            }, "*");
+            }
+        });
+        });
+    }
+    });
+    </script>
 </head>
 <body>
 
@@ -49,7 +63,16 @@
                         <h3>Apprentissage</h3>
                         <h2 class="section-title">Documentations et Vidéos</h2>
                         <p class="section-subtitle">
-                            <ul id="docs" class="col-1"></ul>
+                            <a target="_blank" href="https://ctfs.cyrhades.fr/ressources/Path_traversal.pdf">
+                                <img src="./assets/images/pdf.png" />
+                                Path Traversal / Directory Traversal
+                            </a>
+                            <br />
+                            <a target="_blank" href="https://nodejs.org/fr/learn/getting-started/introduction-to-nodejs">
+                                <img src="./assets/images/link.png" />
+                                Apprendre NodeJS
+                            </a>
+                            <br />
                         </p>
                     </div>
                 </div> 
