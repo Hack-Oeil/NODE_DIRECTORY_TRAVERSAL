@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head lang="fr">
     <meta charset="UTF-8">
     <!--Page Title-->
@@ -7,97 +8,102 @@
     <!--Meta Keywords and Description-->
     <meta name="keywords" content="">
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
-    <link rel="shortcut icon" href="./assets/images/favicon.ico" title="Favicon"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <link rel="shortcut icon" href="./assets/images/favicon.ico" title="Favicon" />
     <link rel="stylesheet" href="./assets/css/style.css">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
     <script>
-    document.addEventListener('DOMContentLoaded', () => {
-    // Vérifie si la fenêtre est dans une iframe
-    if (window.self !== window.top) {
-        document.querySelectorAll('a').forEach((link) => {
-        link.addEventListener('click', (event) => {
-            const a = event.target.closest('a[href^="http"]');
-            if (a) {
-            event.preventDefault();
-            window.parent.postMessage({
-                type: "open-external",
-                url: a.href
-            }, "*");
+        document.addEventListener('DOMContentLoaded', () => {
+            // Vérifie si la fenêtre est dans une iframe
+            if (window.self !== window.top) {
+                document.querySelectorAll('a').forEach((link) => {
+                    link.addEventListener('click', (event) => {
+                        const a = event.target.closest('a[href^="http"]');
+                        if (a) {
+                            event.preventDefault();
+                            window.parent.postMessage({
+                                type: "open-external",
+                                url: a.href
+                            }, "*");
+                        }
+                    });
+                });
             }
         });
-        });
-    }
-    });
     </script>
 </head>
+
 <body>
 
-<div id="wrapper">
-    <!--Main Content Area-->
-    <main id="content">
-        <!--Ctf-->
-        <section class="ctf scrollto">
-            <div class="row clearfix">        
-                <div class="col-39">  
-                    <div class="section-heading">
-                        <h3>Challenge #3</h3>
-                        <h2 class="section-title">Path traversal en NodeJS</h2>
-                        <p class="section-subtitle">
-                            Vous devez retrouver le flag caché dans un fichier d'environnement.
-                            Le serveur sert principalement des fichiers statiques, 
-                            mais un comportement plus subtil s'y cache...
-                            <br />
+    <div id="wrapper">
+        <!--Main Content Area-->
+        <main id="content">
+            <!--Ctf-->
+            <section class="ctf scrollto">
+                <div class="row clearfix">
+                    <div class="col-39">
+                        <div class="section-heading">
+                            <h3>Challenge #3</h3>
+                            <h2 class="section-title">Path traversal en NodeJS</h2>
+                            <p class="section-subtitle">
+                                Vous devez retrouver le flag caché dans un fichier d'environnement.
+                                Le serveur sert principalement des fichiers statiques,
+                                mais un comportement plus subtil s'y cache...
+                                <br />
                             <h4>Aperçu:</h4>
                             <img class="capture" src="./assets/images/capture.jpg" alt="aperçu">
                             <br /><br />
                             Pour cela vous devez avoir les connaissances suivantes :
                             <ul id="prerequisites" class="col-1">
                                 <li>Path Traversal</li>
-                                <li>Fonctionnement de NodeJS</li>             
-                            </ul>  
-                        </p>
+                                <li>Fonctionnement de NodeJS</li>
+                            </ul>
+                            </p>
+                        </div>
                     </div>
-                </div> 
-            </div>
-            <div class="row clearfix">        
-                <div class="col-39">  
-                    <div class="section-heading">
-                        <h3>Apprentissage</h3>
-                        <h2 class="section-title">Documentations et Vidéos</h2>
-                        <p class="section-subtitle">
-                            <a target="_blank" href="https://ctfs.cyrhades.fr/ressources/Path_traversal.pdf">
-                                <img src="./assets/images/pdf.png" />
-                                Path Traversal / Directory Traversal
-                            </a>
-                            <br />
-                            <a target="_blank" href="https://nodejs.org/fr/learn/getting-started/introduction-to-nodejs">
-                                <img src="./assets/images/link.png" />
-                                Apprendre NodeJS
-                            </a>
-                            <br />
-                        </p>
+                </div>
+                <div class="row clearfix">
+                    <div class="col-39">
+                        <div class="section-heading">
+                            <h3>Apprentissage</h3>
+                            <h2 class="section-title">Documentations et Vidéos</h2>
+                            <p class="section-subtitle">
+                                <a target="_blank" href="https://ctfs.cyrhades.fr/ressources/Path_traversal.pdf">
+                                    <img src="./assets/images/pdf.png" />
+                                    Path Traversal / Directory Traversal
+                                </a>
+                                <br />
+                                <a target="_blank"
+                                    href="https://nodejs.org/fr/learn/getting-started/introduction-to-nodejs">
+                                    <img src="./assets/images/link.png" />
+                                    Apprendre NodeJS
+                                </a>
+                                <br />
+                            </p>
+                        </div>
                     </div>
-                </div> 
-            </div>
+                </div>
 
-            <div class="row clearfix">        
-                <div class="col-39">  
-                    <div class="section-heading">
-                        <h3>Aide</h3>
-                        <h2 class="section-title">Conseils et indices</h2>
-                        <p class="section-subtitle">
-                            <a target="_blank" href="https://discord.com/channels/1175764392307077120/1176173464411979806">Fil sur le Discord</a>
-                        </p>
+                <div class="row clearfix">
+                    <div class="col-39">
+                        <div class="section-heading">
+                            <h3>Aide</h3>
+                            <h2 class="section-title">Conseils et indices</h2>
+                            <p class="section-subtitle">
+                                <a target="_blank"
+                                    href="https://discord.com/channels/1175764392307077120/1175764601716092948">Fil sur
+                                    le Discord</a>
+                            </p>
+                        </div>
                     </div>
-                </div> 
-            </div>
-        </section>
-        <!--End of Ctf-->
-    </main>
-    <!--End Main Content Area-->
+                </div>
+            </section>
+            <!--End of Ctf-->
+        </main>
+        <!--End Main Content Area-->
 
-    <a id="scrollUp" href="#wrapper" style="position: fixed; z-index: 1000;" title="Remonter en tête de site"></a>
-</div>
+        <a id="scrollUp" href="#wrapper" style="position: fixed; z-index: 1000;" title="Remonter en tête de site"></a>
+    </div>
 </body>
+
 </html>
