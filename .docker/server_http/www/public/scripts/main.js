@@ -1,1 +1,1 @@
-console.info(`Vérification du chargement static de mon fichier JS`);
+console.info(`Verifying the static loading of my JS file`);

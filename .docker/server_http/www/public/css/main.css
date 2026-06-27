@@ -50,3 +50,12 @@
     .article {
       margin-bottom: 2rem;
     }
+
+/* RTL Support for Arabic */
+html[dir="rtl"] body, html[dir="rtl"] div, html[dir="rtl"] p, html[dir="rtl"] h1, html[dir="rtl"] h2, html[dir="rtl"] a, html[dir="rtl"] footer {
+    direction: rtl !important;
+    text-align: right !important;
+}
+html[dir="rtl"] [class*='col-'] {
+    float: right;
+}

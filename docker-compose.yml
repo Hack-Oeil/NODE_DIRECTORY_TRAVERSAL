@@ -3,9 +3,11 @@ services:
   webserver:
     build: ./.docker/server_http/
     environment:
+      - HOOS_CTF_EMAIL=${HOOS_CTF_EMAIL:-}
       - HOOS_CTF_USERNAME=${HOOS_CTF_USERNAME:-}
+      - LANGUAGE=${LANGUAGE:-fr}
     ports:
       - ${PORT}:80
     restart: always
     labels:
-      ho.ctf.cyrhades: "1"
+      ho.ctf.cyrhades: "challenge"

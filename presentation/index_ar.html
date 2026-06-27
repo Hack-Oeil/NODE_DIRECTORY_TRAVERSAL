@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <!--Page Title-->
+    <title>Hack-Oeil - تحديات Cyrhades</title>
+    <!--Meta Keywords and Description-->
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <link rel="shortcut icon" href="./assets/images/favicon.ico" title="Favicon" />
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Vérifie si la fenêtre est dans une iframe
+            if (window.self !== window.top) {
+                document.querySelectorAll('a').forEach((link) => {
+                    link.addEventListener('click', (event) => {
+                        const a = event.target.closest('a[href^="http"]');
+                        if (a) {
+                            event.preventDefault();
+                            window.parent.postMessage({
+                                type: "open-external",
+                                url: a.href
+                            }, "*");
+                        }
+                    });
+                });
+            }
+        });
+    </script>
+</head>
+
+<body>
+
+    <div id="wrapper">
+        <!--Main Content Area-->
+        <main id="content">
+            <!--Ctf-->
+            <section class="ctf scrollto">
+                <div class="row clearfix">
+                    <div class="col-39">
+                        <div class="section-heading">
+                            <h3>التحدي #3</h3>
+                            <h2 class="section-title">اجتياز المسار في NodeJS</h2>
+                            <p class="section-subtitle">
+                                يجب عليك العثور على العلم المخفي في ملف البيئة. يخدم الخادم بشكل أساسي الملفات الثابتة، ولكن يختبئ هناك سلوك أكثر دقة...
+                                <br />
+                            <h4>معاينة:</h4>
+                            <img class="capture" src="./assets/images/capture.jpg" alt="aperçu">
+                            <br /><br />
+                            للقيام بذلك يجب أن يكون لديك المعرفة التالية:
+                            <ul id="prerequisites" class="col-1">
+                                <li>اجتياز المسار</li>
+                                <li>كيف يعمل NodeJS</li>
+                            </ul>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row clearfix">
+                    <div class="col-39">
+                        <div class="section-heading">
+                            <h3>التعلم</h3>
+                            <h2 class="section-title">الوثائق ومقاطع الفيديو</h2>
+                            <p class="section-subtitle">
+                                <a target="_blank" href="https://ctfs.cyrhades.fr/ressources/Path_traversal.pdf">
+                                    <img src="./assets/images/pdf.png" />
+                                    اجتياز المسار / اجتياز الدليل
+                                </a>
+                                <br />
+                                <a target="_blank"
+                                    href="https://nodejs.org/fr/learn/getting-started/introduction-to-nodejs">
+                                    <img src="./assets/images/link.png" />
+                                    تعلم NodeJS
+                                </a>
+                                <br />
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row clearfix">
+                    <div class="col-39">
+                        <div class="section-heading">
+                            <h3>مساعدة</h3>
+                            <h2 class="section-title">نصائح وتلميحات</h2>
+                            <p class="section-subtitle">
+                                <a target="_blank"
+                                    href="https://discord.com/channels/1175764392307077120/1175764601716092948">موضوع الديسكورد</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--End of Ctf-->
+        </main>
+        <!--End Main Content Area-->
+
+        <a id="scrollUp" href="#wrapper" style="position: fixed; z-index: 1000;" title="العودة للأعلى"></a>
+    </div>
+</body>
+
+</html>

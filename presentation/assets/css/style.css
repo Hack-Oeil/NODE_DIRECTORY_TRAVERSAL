@@ -219,3 +219,36 @@ h6 {
     color:#999;
 }
 #landing-footer i { color:#999; }
+
+/* RTL Support for Arabic */
+html[dir="rtl"] body,
+html[dir="rtl"] div,
+html[dir="rtl"] dl,
+html[dir="rtl"] dt,
+html[dir="rtl"] dd,
+html[dir="rtl"] ul,
+html[dir="rtl"] ol,
+html[dir="rtl"] li,
+html[dir="rtl"] h1,
+html[dir="rtl"] h2,
+html[dir="rtl"] h3,
+html[dir="rtl"] h4,
+html[dir="rtl"] h5,
+html[dir="rtl"] h6,
+html[dir="rtl"] pre,
+html[dir="rtl"] form,
+html[dir="rtl"] blockquote,
+html[dir="rtl"] th,
+html[dir="rtl"] td {
+    direction: rtl !important;
+    text-align: right !important;
+}
+
+html[dir="rtl"] [class*='col-'] {
+    float: right;
+}
+
+html[dir="rtl"] #scrollUp {
+    right: auto;
+    left: 30px;
+}
