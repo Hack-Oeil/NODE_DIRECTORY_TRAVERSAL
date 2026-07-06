@@ -49,7 +49,7 @@ const server = http.createServer((req, res) => {
 
                 const html = data.toString(); // Convertit le Buffer en string
                 if(html.indexOf(process.env.FLAG) !== -1) {
-                    const flagText = flag(process.env.FLAG, username(req));
+                    const flagText = flag(req)(process.env.FLAG, username(req));
                     res.end(html.replace(process.env.FLAG, flagText));
                 } else {
                     res.end(data);
